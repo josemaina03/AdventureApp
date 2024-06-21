@@ -1,0 +1,16 @@
+<div>
+    
+    <h1 appTalkative>Click me for a random message!</h1>
+  <input type="text" [(ngModel)]="inputValue" placeholder="Type something..." />
+    <p [ngClass]="{'error': inputValue && inputValue.length < 5}"
+       [ngStyle]="{'color': inputValue && inputValue.length < 5 ? 'red' : 'black'}">
+      {{ inputValue | placeholder: 'Input is too short!' : 5 }}
+    </p>
+  <app-spinning-wheel></app-spinning-wheel>
+  </div>
+  
+  <div>
+    <input type="text" [(ngModel)]="inputValue" placeholder="Enter text here" />
+    <p>{{ inputValue }}</p>
+</div>
+  
